@@ -81,12 +81,20 @@
 
     ul {
       list-style: none;
-      padding: 0;
+      padding: 0 0 0 0.75rem;
       margin-bottom: 1rem;
     }
 
     ul li {
       margin-bottom: 0.5rem;
+    }
+
+    ul li::before {
+      content: "·";
+      display: inline-block;
+      width: 0.7em;
+      font-weight: 700;
+      color: #222;
     }
 
     a {
@@ -102,6 +110,11 @@
       font-size: 0.875rem;
       color: rgba(34, 34, 34, 0.85);
       font-style: italic;
+    }
+
+    .highlight {
+      background-color: #FFE600;
+      padding: 0.1em 0.25em;
     }
   </style>
 </head>
@@ -151,29 +164,29 @@
     </div>
 
     <h1>Find What Matters in Microsoft 365</h1>
-    <p><a href="https://onedrive.com">OneDrive</a> is the solution for all your private, shared, team & site files files, no matter where they live.</p>
-
     <p class="caption">Thanks for coming to our lightning talk! Here's some useful resources, you can share this page with others at <a href="https://aka.ms/LearnOD">aka.ms/LearnOD</a><span style="font-size: 6px;"> </span>:</p>
 
-    <h2>1️⃣ Did we make the grade?</h2>
+    <h2>Did we make the grade?</h2>
     <p>Send the OneDrive team your feedback via <a href="https://whova.com/portal/6A08bgDowoVnM2RXhCb5KNNt7rTVXTPRu2S@UNqz-ro=/">Whova</a>: Tap <b>Surveys</b> in the Additional Resources section to rate this lightning talk.</p>
     <p>👉 <a href="https://whova.com/portal/session_feedback/bdcc_202512/5258255/"><b>Session Feedback Survey</b></a></p>
     
-    <p>Got questions for us? Contact <a href="https://www.linkedin.com/in/arwa-tyebkhan">Arwa</a> or <a href="https://www.linkedin.com/in/carlos-perez-ux">Carlos</a> on LinkedIn.</p>
+    <p class="caption">Got more questions for us? Contact <a href="https://www.linkedin.com/in/arwa-tyebkhan">Arwa</a> or <a href="https://www.linkedin.com/in/carlos-perez-ux">Carlos</a> on LinkedIn.</p>
 
-    <h2>2️⃣ Executive Summary</h2>
-    <p>recap presentation or presenter names here? <a href="#">link to the deck</a>.</p>
+    <h2>Executive Summary</h2>
+    <p><a href="https://onedrive.com">OneDrive</a> is the solution for all your private, shared, team & site files files, no matter where they live.</p>
 
-    <h2>3️⃣ Resources</h2>
+    <p><span class="highlight">LOREM IPSUM WHAT TO PUT HERE?</span> <a href="#">link to the deck</a>.</p>
+
+    <h2>Resources</h2>
+    <p class="caption"><span class="highlight">LOREM IPSUM</span> put in all those resources Arwa has in the hidden slide, can even add a jumplist per topic</P>
     <ul>
       <li><a href="https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage">OneDrive home</a></li>
       <li><a href="https://support.microsoft.com/en-us/onedrive">Support &amp; help</a></li>
       <li><a href="https://learn.microsoft.com/en-us/onedrive/">Documentation</a></li>
       <li><a href="https://www.microsoft.com/en-us/microsoft-365">Microsoft 365</a></li>
-      <li><i>put in all those resources Arwa has in the hidden slide, can even add a jumplist per topic</i></li>
-    </ul>
+     </ul>
 
-    <h2>4️⃣ More about M365 Community Conference 2026</h2>
+    <h2>More about M365 Community Conference 2026</h2>
 
     <p><a href="https://aka.ms/joinMTC">Microsoft Tech Community</a><br>
     <span class="caption">The community platform for Microsoft 365 - forums, blogs, and events.</span></p>
