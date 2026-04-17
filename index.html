@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Find what matters in M365 - OneDrive</title>
   <link rel="icon" type="image/svg+xml" href="onedrive_48x1.svg">
   <style>
@@ -12,19 +12,32 @@
       padding: 0;
     }
 
+    html {
+      min-height: 100vh;
+    }
+
     body {
       font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       color: #222;
+      background: transparent;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem 1.5rem;
+      padding: 2rem max(1.5rem, env(safe-area-inset-right)) 2rem max(1.5rem, env(safe-area-inset-left));
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
       background:
         linear-gradient(rgba(255, 255, 255, 0.95), rgba(255,255,255,0.75)),
         linear-gradient(-45deg, #E8485C 3%, #0078D4 8%, #00BCF2 20%, #D0E8FF 50%, #0078D4 72%, #8661C5 85%, #EA4AAA 95%);
-      background-attachment: fixed, fixed;
-      min-height: 100vh;
-      padding: 2rem 1.5rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     .content {
@@ -146,7 +159,7 @@
     <p>Send the OneDrive team your feedback via <a href="https://whova.com/portal/6A08bgDowoVnM2RXhCb5KNNt7rTVXTPRu2S@UNqz-ro=/">Whova</a>: Tap <b>Surveys</b> in the Additional Resources section to rate this lightning talk.</p>
     <p>👉 <a href="https://whova.com/portal/session_feedback/bdcc_202512/5258255/"><b>Session Feedback Survey</b></a></p>
     
-    <p>Got questions for us? Contact <a href="#">Arwa</a> or <a href="#">Carlos</a> on LinkedIn.</a></p>
+    <p>Got questions for us? Contact <a href="https://www.linkedin.com/in/arwa-tyebkhan">Arwa</a> or <a href="https://www.linkedin.com/in/carlos-perez-ux">Carlos</a> on LinkedIn.</p>
 
     <h2>2️⃣ Executive Summary</h2>
     <p>recap presentation or presenter names here? <a href="#">link to the deck</a>.</p>
@@ -160,8 +173,17 @@
       <li><i>put in all those resources Arwa has in the hidden slide, can even add a jumplist per topic</i></li>
     </ul>
 
-    <h2>4️⃣ Lorem Ipsum omg Claude just added this lol</h2>
-    <p>Files On-Demand lets you access all your files without using local storage. Known Folder Move automatically backs up your Desktop, Documents, and Pictures folders to the cloud.</p>
+    <h2>4️⃣ More about M365 Community Conference 2026</h2>
+
+    <p><a href="https://aka.ms/joinMTC">Microsoft Tech Community</a><br>
+    <span class="caption">The community platform for Microsoft 365 - forums, blogs, and events.</span></p>
+
+    <p><a href="https://communitydays.org">CommunityDays.org</a><br>
+    <span class="caption">Find or host a local event in your area matching your interests.</span></p>
+
+    <p><a href="https://aka.ms/microsoftcommunitylinkedin">Microsoft Community on LinkedIn</a><br>
+    <span class="caption">News, announcements and training delivered to your news feed.</span></p>
+
 
   </div>
 </body>
