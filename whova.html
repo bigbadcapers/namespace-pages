@@ -3,16 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta http-equiv="refresh" content="0;url=whova://Orlando2026">
   <title>Opening Whova...</title>
   <link rel="icon" type="image/svg+xml" href="onedrive_48x1.svg">
 </head>
 <body>
   <p>Opening Whova&hellip;</p>
   <script>
-    setTimeout(function () {
-      window.location.href = "https://whova.com/portal/6A08bgDowoVnM2RXhCb5KNNt7rTVXTPRu2S@UNqz-ro=/";
+    var fallbackUrl = "https://whova.com/portal/6A08bgDowoVnM2RXhCb5KNNt7rTVXTPRu2S@UNqz-ro=/";
+    var appUrl = "whova://Orlando2026";
+    var timeout;
+
+    // Create a hidden link and simulate a click to launch the custom scheme.
+    // This avoids the "can't open page" error that window.location can trigger.
+    var link = document.createElement("a");
+    link.href = appUrl;
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+
+    // If the app opened, the page goes to background and this timer pauses.
+    // If the scheme was ignored, this fires and redirects to the web fallback.
+    timeout = setTimeout(function () {
+      if (!document.hidden) {
+        window.location.href = fallbackUrl;
+      }
     }, 1500);
+
+    // If the user returns from the app later, don't redirect.
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        clearTimeout(timeout);
+      }
+    });
   </script>
 </body>
 </html>
